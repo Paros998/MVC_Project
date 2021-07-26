@@ -38,8 +38,6 @@ D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\ref\Mvc
 D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\MvcMovie.pdb
 D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\MvcMovie.genruntimeconfig.cache
 D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\MvcMovie.csproj.CopyComplete
-D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\HelloWorld\Index.cshtml.g.cs
-D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\HelloWorld\Welcome.cshtml.g.cs
 D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\bin\Debug\net5.0\MvcMovie.StaticWebAssets.xml
 D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\bin\Debug\net5.0\Humanizer.dll
 D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
@@ -178,3 +176,8 @@ D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\V
 D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Movies\Details.cshtml.g.cs
 D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Movies\Edit.cshtml.g.cs
 D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Movies\Index.cshtml.g.cs
+d:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Students\Create.cshtml.g.cs
+d:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Students\Delete.cshtml.g.cs
+d:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Students\Details.cshtml.g.cs
+d:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Students\Edit.cshtml.g.cs
+d:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Students\Index.cshtml.g.cs

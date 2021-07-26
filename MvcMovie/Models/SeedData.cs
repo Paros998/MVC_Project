@@ -56,6 +56,23 @@ namespace MvcMovie.Models
                         Price = 3.99M
                     }
                 );
+
+                if(context.Student.Any()){
+                    return;
+                }
+
+                context.Student.AddRange(
+                    new Student{
+                        StudentName = "Richard",
+                        StudentSurname = "Bravo",
+                        Age = 21,
+                        Year = 3,
+                        Semester = 1,
+                        JoinTime = "01.01.2018",
+                        University = "Politechnika Świętokrzyska w Kielach"
+                    }
+
+                );
                 context.SaveChanges();
             }
         }

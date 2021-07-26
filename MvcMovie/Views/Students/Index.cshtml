@@ -1,0 +1,51 @@
+@model IEnumerable<MvcMovie.Models.Student>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentSurname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.University)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentSurname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.University)
+            </td>
+            <td>
+                @Html.ActionLink("Edit","Edit",new {id = item.StudentId}) |
+                @Html.ActionLink("Details","Details",new {id = item.StudentId}) |
+                @Html.ActionLink("Delete","Delete",new{id = item.StudentId})
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

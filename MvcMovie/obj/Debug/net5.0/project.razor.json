@@ -15624,18 +15624,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\VSCODE-portable\\Projekty\\WebDev\\MVC_Project\\MvcMovie\\Views\\Students\\Details.cshtml",
+      "TargetPath": "Views\\Students\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\VSCODE-portable\\Projekty\\WebDev\\MVC_Project\\MvcMovie\\Views\\Students\\Create.cshtml",
+      "TargetPath": "Views\\Students\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\VSCODE-portable\\Projekty\\WebDev\\MVC_Project\\MvcMovie\\Views\\Movies\\Edit.cshtml",
       "TargetPath": "Views\\Movies\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\VSCODE-portable\\Projekty\\WebDev\\MVC_Project\\MvcMovie\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FilePath": "d:\\VSCODE-portable\\Projekty\\WebDev\\MVC_Project\\MvcMovie\\Views\\Students\\Edit.cshtml",
+      "TargetPath": "Views\\Students\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\VSCODE-portable\\Projekty\\WebDev\\MVC_Project\\MvcMovie\\Views\\HelloWorld\\Welcome.cshtml",
-      "TargetPath": "Views\\HelloWorld\\Welcome.cshtml",
+      "FilePath": "d:\\VSCODE-portable\\Projekty\\WebDev\\MVC_Project\\MvcMovie\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15654,11 +15664,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\VSCODE-portable\\Projekty\\WebDev\\MVC_Project\\MvcMovie\\Views\\HelloWorld\\Index.cshtml",
-      "TargetPath": "Views\\HelloWorld\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "d:\\VSCODE-portable\\Projekty\\WebDev\\MVC_Project\\MvcMovie\\Views\\Movies\\Details.cshtml",
       "TargetPath": "Views\\Movies\\Details.cshtml",
       "FileKind": "mvc"
@@ -15669,6 +15674,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\VSCODE-portable\\Projekty\\WebDev\\MVC_Project\\MvcMovie\\Views\\Students\\Index.cshtml",
+      "TargetPath": "Views\\Students\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\VSCODE-portable\\Projekty\\WebDev\\MVC_Project\\MvcMovie\\Views\\Movies\\Delete.cshtml",
       "TargetPath": "Views\\Movies\\Delete.cshtml",
       "FileKind": "mvc"
@@ -15676,6 +15686,11 @@
     {
       "FilePath": "d:\\VSCODE-portable\\Projekty\\WebDev\\MVC_Project\\MvcMovie\\Views\\Movies\\Index.cshtml",
       "TargetPath": "Views\\Movies\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\VSCODE-portable\\Projekty\\WebDev\\MVC_Project\\MvcMovie\\Views\\Students\\Delete.cshtml",
+      "TargetPath": "Views\\Students\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
