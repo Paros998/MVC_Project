@@ -23,6 +23,14 @@ namespace MvcMovie.Controllers
             return View(await _context.Student.ToListAsync());
         }
 
+        //Post create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,StudentName,StudentSurname,Age,Year,Semester,JoinTime,University")]){
+            if(ModelState.IsValid()){
+                _context.Add(Student);
+            }
+        }
         
     }
 }
