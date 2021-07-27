@@ -30,7 +30,7 @@ a {
   0% {
     border: 2px gold;
     border-style: solid;
-    background-color: crimson;
+    background-color: goldenrod;
     color: black;
   }
   50%{
@@ -42,17 +42,16 @@ a {
   100%{
     border: 2px gold;
     border-style: solid;
-    background-color: crimson;
+    background-color: goldenrod;
     color: black;
   }
 }
-
 
 /* Forms styles
 ---------------------*/
 
 .submitter{
-  background-color: crimson;
+  background-color: goldenrod;
   color: gold;
   animation-name: submitsFlow;
   animation-duration: 4s;
