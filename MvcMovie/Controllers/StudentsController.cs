@@ -94,8 +94,9 @@ namespace MvcMovie.Controllers
 
         //Post Edit
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id,[Bind("StudentIdStudentName,StudentSurname,Age,Year,Semester,JoinTime,University")] Student student){
+        [ValidateAntiForgeryToken,ActionName("Edit2")]
+        public async Task<IActionResult> Edit(int id,[Bind("StudentId,StudentName,StudentSurname,Age,Year,Semester,JoinTime,University")] Student student){
+
             if(id != student.StudentId){
                 return NotFound();
             }
@@ -108,7 +109,7 @@ namespace MvcMovie.Controllers
                 }
                 catch(DbUpdateConcurrencyException)
                 {
-                    if(StudentExists(id))
+                    if(StudentExists(student.StudentId))
                     {
                         return NotFound();
                     }

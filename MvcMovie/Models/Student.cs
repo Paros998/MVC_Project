@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,10 +8,10 @@ namespace MvcMovie.Models
     {   
         public int StudentId {get;set;}
 
-        [Required,StringLength(40,MinimumLength = 3),RegularExpression(@"^[A-Z]+[a-z""]*$")]
+        [DisplayNameAttribute("Student Name"),Required,StringLength(40,MinimumLength = 3),RegularExpression(@"^[A-Z]+[a-zA-Z\s-]*$")]
         public string StudentName {get;set;}
 
-        [Required,StringLength(60,MinimumLength = 5),RegularExpression(@"^[A-Z]+[a-z""-]*$")]
+        [DisplayNameAttribute("Student Surname"),Required,StringLength(60,MinimumLength = 5),RegularExpression(@"^[A-Z]+[a-zA-Z\s-]*$")]
         public string StudentSurname {get;set;}
 
         [Required,Range(1,100)]
@@ -22,10 +23,10 @@ namespace MvcMovie.Models
         [Required,Range(1,2)]
         public int Semester {get;set;}
 
-        [Required,DataType(DataType.Date)]
+        [DisplayNameAttribute("Join Time"),Required,DataType(DataType.Date)]
         public string JoinTime {get;set;}
 
-        [Required,StringLength(90,MinimumLength = 10),RegularExpression(@"^[A-Z]+[a-z""-]*$")]
+        [Required,StringLength(90,MinimumLength = 10),RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
         public string University {get;set;}
     }
 }
