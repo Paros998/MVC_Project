@@ -23,6 +23,50 @@ a {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+/* Animations
+------------------*/
+
+@keyframes submitsFlow {
+  0% {
+    border: 2px gold;
+    border-style: solid;
+    background-color: crimson;
+    color: black;
+  }
+  50%{
+    border: 2px crimson;
+    border-style: solid;
+    background-color: gold;
+    color: black;
+  }
+  100%{
+    border: 2px gold;
+    border-style: solid;
+    background-color: crimson;
+    color: black;
+  }
+}
+
+
+/* Forms styles
+---------------------*/
+
+.submitter{
+  background-color: crimson;
+  color: gold;
+  animation-name: submitsFlow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+
+.form-input:hover{
+  background-color: crimson;
+  color: gold;
+  animation-name: submitsFlow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
 
 /* Sticky footer styles
 -------------------------------------------------- */

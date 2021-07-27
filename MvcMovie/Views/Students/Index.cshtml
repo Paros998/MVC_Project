@@ -1,31 +1,43 @@
-@model IEnumerable<MvcMovie.Models.Student>
+@model MvcMovie.Models.StudentsFilterModel
 @{
     ViewData["Title"] = "Index";
 }
-
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
 <h1>Index</h1>
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<form asp-controller="Students" asp-action="Index">
+    <div class="filter-div">
+            Lowest Age : <input class="form-input" type="number" name="AgeRangeX">
+            Highest Age : <input class="form-input" type="number" name="AgeRangeY">
+            University : <input class="form-input" type="text" name="UniversityString">
+        <input class="submitter" type="submit" value="Filter Students">
+    </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.StudentName)
+                @Html.DisplayNameFor(model => model.Students[0].StudentName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.StudentSurname)
+                @Html.DisplayNameFor(model => model.Students[0].StudentSurname)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Age)
+                @Html.DisplayNameFor(model => model.Students[0].Age)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.University)
+                @Html.DisplayNameFor(model => model.Students[0].University)
             </th>
         </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model)
+    @foreach (var item in Model.Students)
     {
         <tr>
             <td>
