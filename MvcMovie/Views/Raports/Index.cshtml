@@ -1,0 +1,94 @@
+@model IEnumerable<MvcMovie.Models.Raport>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<h1>Index</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NrRaportu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataRaportu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaZakladu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produkt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Seria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TypOdczytu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Odczyt1) 
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Odczyt2)  
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Odczyt3) 
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Norma)
+            </th>
+            <th>
+                Options
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NrRaportu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataRaportu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazwaZakladu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Produkt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Seria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypOdczytu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Odczyt1) 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Odczyt2) 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Odczyt3) 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Norma)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

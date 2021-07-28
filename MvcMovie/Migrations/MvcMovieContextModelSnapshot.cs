@@ -47,6 +47,75 @@ namespace MvcMovie.Migrations
                     b.ToTable("Movie");
                 });
 
+            modelBuilder.Entity("MvcMovie.Models.Produkt", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("nazwa")
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("normaHigh")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("normaLow")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("typBadania")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Produkt");
+                });
+
+            modelBuilder.Entity("MvcMovie.Models.Raport", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DataRaportu")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("NazwaZakladu")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Norma")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("NrRaportu")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("Odczyt1")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("Odczyt2")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("Odczyt3")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("Produkt")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Seria")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TypOdczytu")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Raport");
+                });
+
             modelBuilder.Entity("MvcMovie.Models.Student", b =>
                 {
                     b.Property<int>("StudentId")

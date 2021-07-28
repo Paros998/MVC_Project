@@ -181,3 +181,8 @@ d:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\V
 d:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Students\Details.cshtml.g.cs
 d:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Students\Edit.cshtml.g.cs
 d:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Students\Index.cshtml.g.cs
+D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Raports\Create.cshtml.g.cs
+D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Raports\Delete.cshtml.g.cs
+D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Raports\Details.cshtml.g.cs
+D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Raports\Edit.cshtml.g.cs
+D:\VSCODE-portable\Projekty\WebDev\MVC_Project\MvcMovie\obj\Debug\net5.0\Razor\Views\Raports\Index.cshtml.g.cs

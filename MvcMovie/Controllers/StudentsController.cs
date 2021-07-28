@@ -97,9 +97,9 @@ namespace MvcMovie.Controllers
         [ValidateAntiForgeryToken,ActionName("Edit2")]
         public async Task<IActionResult> Edit(int id,[Bind("StudentId,StudentName,StudentSurname,Age,Year,Semester,JoinTime,University")] Student student){
 
-            if(id != student.StudentId){
-                return NotFound();
-            }
+            // if(id != student.StudentId){
+            //     return NotFound();
+            // }
 
             if(ModelState.IsValid)
             {

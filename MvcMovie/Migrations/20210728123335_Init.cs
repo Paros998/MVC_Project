@@ -25,6 +25,44 @@ namespace MvcMovie.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Produkt",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    nazwa = table.Column<string>(type: "TEXT", nullable: true),
+                    typBadania = table.Column<string>(type: "TEXT", nullable: true),
+                    normaLow = table.Column<double>(type: "REAL", nullable: false),
+                    normaHigh = table.Column<double>(type: "REAL", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Produkt", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Raport",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    NrRaportu = table.Column<int>(type: "INTEGER", nullable: false),
+                    DataRaportu = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Odczyt1 = table.Column<double>(type: "REAL", nullable: false),
+                    Odczyt2 = table.Column<double>(type: "REAL", nullable: false),
+                    Odczyt3 = table.Column<double>(type: "REAL", nullable: false),
+                    TypOdczytu = table.Column<string>(type: "TEXT", nullable: false),
+                    Seria = table.Column<string>(type: "TEXT", nullable: false),
+                    Norma = table.Column<string>(type: "TEXT", nullable: false),
+                    NazwaZakladu = table.Column<string>(type: "TEXT", nullable: false),
+                    Produkt = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Raport", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Student",
                 columns: table => new
                 {
@@ -48,6 +86,12 @@ namespace MvcMovie.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Movie");
+
+            migrationBuilder.DropTable(
+                name: "Produkt");
+
+            migrationBuilder.DropTable(
+                name: "Raport");
 
             migrationBuilder.DropTable(
                 name: "Student");
