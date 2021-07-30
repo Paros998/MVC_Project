@@ -112,3 +112,84 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/* Tables styles
+-----------------*/
+.det-rap{
+  border: 2px black solid;
+  padding: 5px;
+  text-align: center;
+}
+
+.det-rap2{
+  border: 2px black solid;
+  text-align: center;
+  padding: 4px ;
+  margin: 1px;
+}
+.dt-rap{
+  flex: 0 0 50%;
+  max-width: 100%;
+}
+
+@keyframes error {
+  0%{
+    color: red;
+  }
+  50%{
+    color: crimson;
+  }
+  100%{
+    color: red;
+  }
+}
+
+.deltarap{
+  border: 2px black solid;
+  padding: 5px;
+  text-align: center;
+  color: red;
+  background-color: darkgrey;
+  margin-left: -2px;
+  animation-name: error;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+/*Validation styles
+-------------*/
+
+.goodValues{
+  background-color: green;
+  color: greenyellow;
+}
+
+.badValues{
+  background-color: red;
+  color:gold;
+  
+}
+/*Body dividers
+--------------*/
+.up-det{
+  width: 100%;
+  float: left;
+}
+.lft-det{
+  width: 40% ;
+  text-align:  center;
+  float: left;
+  margin-right: 20px auto;
+}
+.rht-det{
+  width: 60% ;
+  float: left;
+}
+.up-det-left{
+  width: 40%;
+  float: left;
+  margin-right: 20px;
+}
+.up-det-right{
+  width: 60% auto;
+  float: left;
+}

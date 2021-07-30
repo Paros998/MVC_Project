@@ -1,5 +1,6 @@
 using System.Numerics;
 using System.Collections.Generic;
+using MvcMovie.DynamicDisplays;
 
 namespace MvcMovie.Models
 {
@@ -7,5 +8,7 @@ namespace MvcMovie.Models
     {
         public Produkt produkt {get;set;}
         public Raport raport {get;set;}
+        public RaportsDetails styl {get;set;}
+        
     }
 }

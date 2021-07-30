@@ -3,42 +3,100 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
-<div class="left-det">
+<div class="up-det">
+    <div class="up-det-left">
+        <h2>Details</h2>
+    </div>
+    
+    <div class="up-det-right">
+        <h3>
+            @Html.DisplayNameFor(model => model.produkt.typBadania)
+            -
+            @Html.DisplayFor(model => model.produkt.typBadania)
+        </h3>
+    </div>
+</div>
+<div class="lft-det">
     <div>   
         <hr />
         <dl class="row">
-            <dt class = "col-sm-2">
+            <dt class = "dt-rap  det-rap2">
                 @Html.DisplayNameFor(model => model.raport.NrRaportu)
             </dt>
-            <dd class = "col-sm-10">
+            <dd class = "col-sm-10 det-rap2">
                 @Html.DisplayFor(model => model.raport.NrRaportu)
             </dd>
-            <dt class = "col-sm-2">
+            <hr />
+            <dt class = "dt-rap  det-rap2">
                 @Html.DisplayNameFor(model => model.raport.DataRaportu)
             </dt>
-            <dd class = "col-sm-10">
+            <dd class = "col-sm-10 det-rap2">
                 @Html.DisplayFor(model => model.raport.DataRaportu)
             </dd>
-            <dt class = "col-sm-2">
+            <hr />
+            <dt class = "dt-rap  det-rap2">
                 @Html.DisplayNameFor(model => model.raport.Produkt)
             </dt>
-            <dd class = "col-sm-10">
+            <dd class = "col-sm-10 det-rap2">
                 @Html.DisplayFor(model => model.raport.Produkt)
             </dd>
-            <dt class = "col-sm-2">
+            <hr />
+            <dt class = "dt-rap  det-rap2">
                 @Html.DisplayNameFor(model => model.raport.Seria)
             </dt>
-            <dd class = "col-sm-10">
+            <dd class = "col-sm-10 det-rap2">
                 @Html.DisplayFor(model => model.raport.Seria)
             </dd>
         </dl>
     </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.raport.id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
 </div>
 <div class="rht-det">
-
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.raport.id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <div class="dw-det">
+        <hr/>
+        <table>
+            <thead>
+                <th class="det-rap">
+                    @Html.DisplayNameFor(model => model.raport.Odczyt1)
+                </th>
+                <th class="det-rap">
+                    @Html.DisplayNameFor(model => model.raport.Odczyt2)
+                </th>
+                <th class="det-rap">
+                    @Html.DisplayNameFor(model => model.raport.Odczyt3)
+                </th>
+                <th class="det-rap">
+                    @Html.DisplayNameFor(model => model.produkt.normaLow)
+                </th>
+                <th class="det-rap">
+                    @Html.DisplayNameFor(model => model.produkt.normaHigh)
+                </th>
+            </thead>
+            <tbody>
+                <td class="wynik1 det-rap" style="@Model.styl.TxtColor1 @Model.styl.BgColor1">
+                    @Html.DisplayFor(model => model.raport.Odczyt1)
+                </td>
+                <td class="wynik2 det-rap" style="@Model.styl.TxtColor2 @Model.styl.BgColor2">
+                    @Html.DisplayFor(model => model.raport.Odczyt2)
+                </td>
+                <td class="wynik3 det-rap" style="@Model.styl.TxtColor3 @Model.styl.BgColor3">
+                    @Html.DisplayFor(model => model.raport.Odczyt3)
+                </td>
+                <td class="det-rap">
+                    @Html.DisplayFor(model => model.produkt.normaLow)
+                </td>
+                <td class="det-rap">
+                    @Html.DisplayFor(model => model.produkt.normaHigh)
+                </td>
+                <td class="deltarap" style="@Model.styl.StatusNormy">
+                    <b>
+                        Normy Przekroczone!!!
+                    </b>
+                </td>
+            </tbody>
+        </table>
+    </div>
 </div>

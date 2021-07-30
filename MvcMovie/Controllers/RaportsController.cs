@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Models;
+using MvcMovie.DynamicDisplays;
 
 namespace MvcMovie.Controllers
 {
@@ -27,7 +28,6 @@ namespace MvcMovie.Controllers
         }
 
         //Get Details
-
         public async Task<IActionResult> Details(int? id){
 
             if(id == null){
@@ -41,11 +41,40 @@ namespace MvcMovie.Controllers
                 return NotFound();
             }
 
+            RaportsDetails style = new RaportsDetails(); 
+
+
+            string[] badValues =  {"color: gold;","background-color: red;"};
+
+            if(raport.Odczyt1 > produkt.normaHigh || raport.Odczyt1 < produkt.normaLow){
+                    style.TxtColor1 = badValues[0];
+                    style.BgColor1 = badValues[1];
+                    style.NormyPrzekroczone = true;
+            }
+
+            if(raport.Odczyt2 > produkt.normaHigh || raport.Odczyt2 < produkt.normaLow){
+                    style.TxtColor2 = badValues[0];
+                    style.BgColor2 = badValues[1];
+                    style.NormyPrzekroczone = true;
+            }
+
+            if(raport.Odczyt3 > produkt.normaHigh || raport.Odczyt3 < produkt.normaLow){
+                    style.TxtColor3 = badValues[0];
+                    style.BgColor3 = badValues[1];
+                    style.NormyPrzekroczone = true;
+            }
+
+            if(style.NormyPrzekroczone)
+            {
+                style.StatusNormy = "display: block;";
+            }
+
             SzczegolyRaportu szczegolyRaportu = new SzczegolyRaportu(){
                 produkt = produkt,
-                raport = raport
-
+                raport = raport,
+                styl = style
             };
+            
 
             return View(szczegolyRaportu);
         }

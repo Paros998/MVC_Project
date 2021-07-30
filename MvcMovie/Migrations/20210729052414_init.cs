@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MvcMovie.Migrations
 {
-    public partial class Init : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -53,7 +53,6 @@ namespace MvcMovie.Migrations
                     Odczyt3 = table.Column<double>(type: "REAL", nullable: false),
                     TypOdczytu = table.Column<string>(type: "TEXT", nullable: false),
                     Seria = table.Column<string>(type: "TEXT", nullable: false),
-                    Norma = table.Column<string>(type: "TEXT", nullable: false),
                     NazwaZakladu = table.Column<string>(type: "TEXT", nullable: false),
                     Produkt = table.Column<string>(type: "TEXT", nullable: false)
                 },

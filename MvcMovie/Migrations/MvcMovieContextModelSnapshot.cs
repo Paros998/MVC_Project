@@ -83,10 +83,6 @@ namespace MvcMovie.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Norma")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("NrRaportu")
                         .HasColumnType("INTEGER");
 

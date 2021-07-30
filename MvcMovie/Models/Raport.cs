@@ -28,9 +28,6 @@ namespace MvcMovie.Models
         [Required,RegularExpression(@"^[A-Z]+[a-zA-z0-9\s]*$")]
         public string Seria {get;set;}
 
-        [Required,RegularExpression(@"^[A-Z]+[a-zA-z0-9\s]*$")]
-        public string Norma {get;set;}
-
         [Required,RegularExpression(@"^[A-Z]+[a-zA-z0-9\s]*$"),DisplayNameAttribute("Nazwa Zakładu")]
         public string NazwaZakladu {get;set;}
 

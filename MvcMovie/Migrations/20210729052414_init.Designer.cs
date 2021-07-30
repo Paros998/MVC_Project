@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MvcMovie.Migrations
 {
     [DbContext(typeof(MvcMovieContext))]
-    [Migration("20210728123335_Init")]
-    partial class Init
+    [Migration("20210729052414_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -82,10 +82,6 @@ namespace MvcMovie.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("NazwaZakladu")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Norma")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
