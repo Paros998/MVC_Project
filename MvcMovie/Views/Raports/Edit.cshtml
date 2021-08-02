@@ -1,0 +1,73 @@
+@model MvcMovie.Models.Raport
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Raport</h4>
+<hr/>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit2" >
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" >
+            <div class="form-group">
+                <label asp-for="NrRaportu" class="control-label"></label>
+                <input asp-for="NrRaportu" class="form-control">
+                <span asp-validation-for="NrRaportu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Produkt" class="control-label"></label>
+                <input asp-for="Produkt" class="form-control"/>
+                <span asp-validation-for="Produkt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataRaportu" class="control-label"></label>
+                <input asp-for="DataRaportu" class="form-control"/>
+                <span asp-validation-for="DataRaportu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaZakladu" class="control-label"></label>
+                <input asp-for="NazwaZakladu" class="form-control">
+                <span asp-validation-for="NazwaZakladu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TypOdczytu" class="control-label"></label>
+                <input asp-for="TypOdczytu" class="form-control">
+                <span asp-validation-for="TypOdczytu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Seria" class="control-label"></label>
+                <input asp-for="Seria" class="form-control">
+                <span asp-validation-for="Seria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Odczyt1" class="control-label"></label>
+                <input asp-for="Odczyt1" class="form-control">
+                <span asp-validation-for="Odczyt1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Odczyt2" class="control-label"></label>
+                <input asp-for="Odczyt2" class="form-control">
+                <span asp-validation-for="Odczyt2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Odczyt3" class="control-label"></label>
+                <input asp-for="Odczyt3" class="form-control">
+                <span asp-validation-for="Odczyt3" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

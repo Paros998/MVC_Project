@@ -22,16 +22,16 @@ namespace MvcMovie.Models
         [Required,DisplayNameAttribute("Odczyt nr.3")]
         public double Odczyt3 {get;set;}
 
-        [Required,RegularExpression(@"^[A-Z]+[a-zA-z0-9\s]*$"),DisplayNameAttribute("Typ Odczytu")]
+        [Required,RegularExpression(@"^[A-Z]+[a-zA-z0-9\s\w\W]*$"),DisplayNameAttribute("Typ Odczytu")]
         public string TypOdczytu {get;set;}
 
-        [Required,RegularExpression(@"^[A-Z]+[a-zA-z0-9\s]*$")]
+        [Required,RegularExpression(@"^[A-Z]+[a-zA-z0-9\s\w\W]*$")]
         public string Seria {get;set;}
 
-        [Required,RegularExpression(@"^[A-Z]+[a-zA-z0-9\s]*$"),DisplayNameAttribute("Nazwa Zakładu")]
+        [Required,RegularExpression(@"^[A-Z]+[a-zA-z0-9\s\w\W]*$"),DisplayNameAttribute("Nazwa Zakładu")]
         public string NazwaZakladu {get;set;}
 
-        [Required,RegularExpression(@"^[A-Z]+[a-zA-z0-9\s]*$")]
+        [Required,RegularExpression(@"^[A-Z]+[a-zA-z0-9\s\w\W]*$")]
         public string Produkt{get;set;}
     }
 }

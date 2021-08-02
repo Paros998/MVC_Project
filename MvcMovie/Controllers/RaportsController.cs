@@ -1,3 +1,4 @@
+using System.Data;
 using System.Runtime.Intrinsics.X86;
 using System.Numerics;
 using System;
@@ -37,8 +38,13 @@ namespace MvcMovie.Controllers
             var raport = await _context.Raport.FirstOrDefaultAsync(r => r.id == id);
             var produkt = await _context.Produkt.FirstOrDefaultAsync(p => p.typBadania == raport.TypOdczytu && p.nazwa == raport.Produkt);
 
-            if(raport == null || produkt == null){
+            if(raport == null ){
                 return NotFound();
+            }
+
+            if(produkt == null)
+            {
+                return NotFound("W bazie nie ma produktu dla danego raportu!!");
             }
 
             RaportsDetails style = new RaportsDetails(); 
@@ -77,6 +83,73 @@ namespace MvcMovie.Controllers
             
 
             return View(szczegolyRaportu);
+        }
+
+        // Get Edit
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if(id == null){
+                return NotFound();
+            }
+
+            var raport = await _context.Raport.FindAsync(id);            
+            if(raport == null){
+                return NotFound();
+            }
+
+            return View(raport);
+        }
+
+        //Post Edit
+        [HttpPost,ActionName("Edit2"),ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id,[Bind("id,NrRaportu,DataRaportu,Odczyt1,Odczyt2,Odczyt3,TypOdczytu,Seria,NazwaZakladu,Produkt")]Raport raport)
+        {
+            if(ModelState.IsValid){
+                try{
+                    _context.Raport.Update(raport);
+                    await _context.SaveChangesAsync();
+
+                }catch(DBConcurrencyException){
+                    if(RaportExists(raport.id)){
+                       return NotFound(); 
+                    }else {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(raport);
+        }
+
+        //Get Delete
+        public async Task<IActionResult> Delete(int ? id){
+
+            if(id == null)
+            {
+                return NotFound();
+            }
+
+            var raport = await _context.Raport.FindAsync(id);
+            if(raport == null)
+            {
+                return NotFound();
+            }
+
+            return View(raport);
+        }
+
+        //Post Delete
+        [HttpPost,ValidateAntiForgeryToken,ActionName("Delete2")]
+        public async Task<IActionResult> Delete(int id){
+
+            var raport = await _context.Raport.FindAsync(id);
+            _context.Raport.Remove(raport);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool RaportExists(int id){
+            return _context.Raport.Any(r => r.id == id);
         }
     }
 }
